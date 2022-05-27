@@ -10,12 +10,18 @@ class Category(models.Model):
     '''categories module'''
     name=models.CharField(max_length=40, blank=True)
 
+    def __str__(self):
+        return self.name
 
 
 
 class Location(models.Model):
     '''locataion module'''
     name=models.CharField(max_length=40, blank=True)
+
+    def __str__(self):
+        return self.name
+
 
 
 class  Image(models.Model):
@@ -25,6 +31,9 @@ class  Image(models.Model):
     image=models.ImageField(null=False, blank=True)
     category=models.ForeignKey(Category , on_delete=models.CASCADE)
     location=models.ForeignKey(Location, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
 
 
     
