@@ -13,3 +13,14 @@
 nav menu ul li .home{
     color: white;
 }
+
+.content img{
+    height: 200px;
+    width:200px
+}
+
+.home-card .row div img{
+    border-radius: 16px;
+    border: 2px solid red;
+    object-fit: cover;
+}
