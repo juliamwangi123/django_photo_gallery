@@ -1,3 +1,4 @@
+from operator import mod
 from pyexpat import model
 from unicodedata import category, name
 from django.db import models
@@ -22,8 +23,8 @@ class  Image(models.Model):
     name=models.CharField(max_length=40, blank=True)
     decription=models.TextField()
     image=models.ImageField(null=False, blank=True)
-    category=models.ForeignKey(Category)
-    location=models.ForeignKey(Category)
+    category=models.ForeignKey(Category , on_delete=models.CASCADE)
+    location=models.ForeignKey(Location, on_delete=models.CASCADE)
 
 
     
