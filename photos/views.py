@@ -5,4 +5,4 @@ from django.shortcuts import render
 #home view rendering pictures of all category
 
 def home(req):
-    return render(req, 'photos/home.html')
+    return render(req, 'photos/home.html' , {'title':home})
