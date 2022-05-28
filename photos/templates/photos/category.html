@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <img src="{{photos.image.url}}" alt="">
+    <img src="{{photos.image.url}}" alt="" style="height: 200px; width:200px">
+    {%for all in allphotos%}
+        <img src="{{all.image.url}}" alt="">
+    {%endfor%}
 </body>
 </html>
