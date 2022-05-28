@@ -1,10 +1,14 @@
+from multiprocessing import context
 from django.shortcuts import render
+
+import photos
 from . models import *
 # Create your views here.
 
 #home view rendering pictures of all category
 
 def home(req):
+    '''''this view is triggered when ckient got to the home page'''
     photos=Image.objects.all()
     context={
         'title':home,
@@ -14,5 +18,11 @@ def home(req):
 
 
 
-def categoty_page(req):
-    return render(req, 'photos/test.html')
+def category_page(req, pk):
+    '''''this view is triggered when user click a specific image'''
+    photos=Image.objects.get(id=pk)
+    context={
+        'title':category_page,
+        'photos':photos
+    }
+    return render(req, 'photos/category.html', context)
