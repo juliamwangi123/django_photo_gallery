@@ -21,13 +21,14 @@ def home(req):
 def category_page(req, pk):
     '''''this view is triggered when user click a specific image'''
     photos=Image.objects.get(id=pk)
+    print(photos.name)
+    print(photos.decription)
 
     # photos in the  same category as the one above
-    allphotos=Category.objects.filter(id=pk)
-
+    allphotos=Image.objects.filter(category=photos.category)
     context={
         'title':category_page,
         'photos':photos,
-        'allphotos':allphotos
+        'allphotos':allphotos,
     }
     return render(req, 'photos/category.html', context)

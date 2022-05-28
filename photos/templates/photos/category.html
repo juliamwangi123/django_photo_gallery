@@ -1,15 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <img src="{{photos.image.url}}" alt="" style="height: 200px; width:200px">
-    {%for all in allphotos%}
-        <img src="{{all.image.url}}" alt="">
-    {%endfor%}
-</body>
-</html>
+{%extends 'photos/base.html'%}
+{%block content%}
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-6 " >
+
+            <img src="{{photos.image.url}}" alt="" style="height: 60%; width:100%; object-fit: cover; border-radius:15px " >
+
+        </div>
+        <div class="col-6">
+            <i class="bi bi-three-dots" style="font-size: 1.5rem; margin-right: 15px; font-weight: 900;"></i>
+            <i class="bi bi-download" style="font-size: 1.5rem; margin-right: 15px; font-weight: 900;"></i>
+            <i class="bi bi-clipboard" style="font-size: 1.5rem;"></i>
+            <br>
+            <br>
+            <h4>Uploaded by <strong>JULES</strong></h4>
+            <br>
+            <br>
+            <p style="font-weight:900; font-size: 32px;">{{photos.name}}</p>
+            <p style="font-weight:500; font-size: 22px;">{{photos.decription}}</p>
+            <br>
+            <br>
+            <div class="input-group">
+                <div class="form-outline">
+                  <input type="search" id="form1" class="form-control" value="Add a Comment" style="border-radius:14px; border: 1px solid silver; width: 400px; height:55px;" />
+                </div>
+                </button>
+              </div>
+        </div>
+      </div>
+</div>
+
+<!-- {%for all in allphotos%}
+    <img src="{{all.image.url}}" alt="">
+{%endfor%} -->
+{%endblock content%}
