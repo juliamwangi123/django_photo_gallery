@@ -1,7 +1,7 @@
 {%extends 'photos/base.html'%}
 {%block content%}
 <div class="container">
-    <div class="row mt-5">
+    <div class="row mt-5" style=" height: 600px ;">
         <div class="col-6 " >
 
             <img src="{{photos.image.url}}" alt="" style="height: 60%; width:100%; object-fit: cover; border-radius:15px " >
@@ -31,7 +31,27 @@
       </div>
 </div>
 
-<!-- {%for all in allphotos%}
-    <img src="{{all.image.url}}" alt="">
-{%endfor%} -->
+
+  <h1>more like this</h1> 
+
+<div class="main">
+ {%for all in allphotos%}
+
+  <ul class="cards">
+    <li class="cards_item">
+      <div class="card">
+        <div class="card_image"><img src="{{all.image.url}}"></div>
+        <div class="card_content">
+          <h2 class="card_title">{{all.name}}</h2>
+          <p class="card_text">{{all.decription}}</p>
+          <i class="bi bi-geo-alt"><small>{{photos.location}}</small></i>
+
+        </div>
+      </div>
+    </li>
+  </ul>
+  {%endfor%} 
+
+
+</div>
 {%endblock content%}
