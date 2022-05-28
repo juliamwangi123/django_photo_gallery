@@ -23,7 +23,8 @@ def category_page(req, pk):
     photos=Image.objects.get(id=pk)
 
     # photos in the  same category as the one above
-    allphotos=Image.objects.filter(category=photos.category)
+    allphotos=Category.objects.filter(id=pk)
+
     context={
         'title':category_page,
         'photos':photos,
