@@ -5,13 +5,15 @@
 
 <div class="main">
 
+
+    
+<h2>{{photosl.location}}</h2>
 {%for photo in photosl%}
 
 
   <ul class="cards" >
     <li class="cards_item"  >
       <div class="card"  style="border: none !important;">
-       
         <div class="card_image"> <a href="{%url 'category' pk=photo.id%}"><img src="{{photo.image.url}}"></a></div>
           <h2 class="card_title" >{{photo.name}}</h2>
           <p class="card_text">{{photo.decription}} </p>
