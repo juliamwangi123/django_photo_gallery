@@ -8,6 +8,9 @@ from django.db import models
 
 class Category(models.Model):
     '''categories module'''
+    # CATEGORY=(
+    #     'fashion':'fashion'
+    # )
     name=models.CharField(max_length=40, blank=True)
 
     def __str__(self):

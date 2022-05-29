@@ -1,0 +1,31 @@
+{%extends 'photos/base.html'%}
+
+{%block content%}
+
+<div class="main">
+{%for photo in photos%}
+
+  <ul class="cards" >
+    <li class="cards_item"  >
+      <div class="card"  style="border: none !important;">
+       
+        <div class="card_image"> <a href="{%url 'category' pk=photo.id%}"><img src="{{photo.image.url}}"></a></div>
+          <h2 class="card_title" >{{photo.name}}</h2>
+          <p class="card_text">{{photo.decription}}</p>
+          <i class="bi bi-geo-alt"><small>{{photo.location}}</small></i>
+         
+
+      </div>
+    </li>
+  </ul>
+
+  {%endfor%} 
+
+
+
+  
+  
+
+</div>
+{%endblock%}
+
