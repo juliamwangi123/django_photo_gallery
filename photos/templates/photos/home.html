@@ -52,11 +52,7 @@
                 </a>
                 <p>{{photo.name}}</p>
                 {%endif%} 
-                {%if forloop.counter == 10%}
-
-                <a href="{%url 'category' pk=photo.id%}"><img src="{{photo.image.url}}" alt="" style="height: 40%; width: 100%;">   </a>
-                <p>{{photo.name}}</p>
-                {%endif%}
+               
                 {%if forloop.counter == 8%}
 
                 <a href="{%url 'category' pk=photo.id%}"><img src="{{photo.image.url}}" alt="" style="height: 40%; width: 100%;">   </a>

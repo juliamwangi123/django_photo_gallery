@@ -28,7 +28,7 @@ nav menu ul li .home{
 .main{
     margin-top: 10px;
     display: flex;
-    
+    flex-wrap: wrap;
   }
   
   h1 {

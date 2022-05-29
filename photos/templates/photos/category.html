@@ -48,13 +48,15 @@ document.querySelector("#board").addEventListener("click", copy);
 <div class="main">
  {%for all in allphotos%}
 
-  <ul class="cards" >
+  <ul class="cards"  style="margin-bottom: 300px;">
     <li class="cards_item"  >
       <div class="card"  style="border: none !important;">
        
         <div class="card_image"> <a href="{%url 'category' pk=all.id%}"><img src="{{all.image.url}}"></a></div>
           <h2 class="card_title" >{{all.name}}</h2>
           <p class="card_text">{{all.decription}}</p>
+          <i class="bi bi-geo-alt"><small>{{all.location}}</small></i>
+
          
         
       </div>
