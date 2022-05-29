@@ -1,7 +1,6 @@
 from django.shortcuts import render,redirect
 from django.db.models import Q
 
-import photos
 from . models import *
 from django.contrib import messages
 # Create your views here.
