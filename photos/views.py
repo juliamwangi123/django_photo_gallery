@@ -1,5 +1,7 @@
 from django.shortcuts import render,redirect
 from django.db.models import Q
+
+import photos
 from . models import *
 from django.contrib import messages
 # Create your views here.
@@ -8,6 +10,9 @@ from django.contrib import messages
 
 def home(req):
     '''''this view is triggered when ckient got to the home page'''
+
+    
+    
     search_photo=req.GET.get('search') #go get the user input 
     if search_photo:
         photos=Image.objects.filter(Q( category__name__icontains=search_photo)| Q(location__name__icontains=search_photo))
@@ -29,6 +34,7 @@ def home(req):
 
 
 
+#view rendered when an image is clicked
 
 def category_page(req, pk):
     '''''this view is triggered when user click a specific image'''
@@ -44,3 +50,12 @@ def category_page(req, pk):
         'allphotos':allphotos,
     }
     return render(req, 'photos/category.html', context)
+
+#view rendered when sub--menu is clicked
+def group(req):
+     photos=Image.objects.filter(category)
+
+     return redirect(req, "home",{'photos':photos})
+   
+
+    
