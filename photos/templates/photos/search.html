@@ -7,10 +7,17 @@
     <title>Document</title>
 </head>
 <body>
+{%if photo %}
+
 {%for photo in photos%}
-    <p>search</p>
     <img src="{{photo.image.url}}" alt="">
 
     {%endfor%}
+    {%else%}
+
+    <p> {{ messages }} </p>
+    {%endif%}
+
+
 </body>
 </html>

@@ -1,29 +1,33 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.db.models import Q
-
-import photos
 from . models import *
+from django.contrib import messages
 # Create your views here.
 
 #home view rendering pictures of all category
 
 def home(req):
     '''''this view is triggered when ckient got to the home page'''
-
-
-    
-    photos=Image.objects.all()
-    context={
-        'title':home,
-        'photos':photos
-    }
-    return render(req, 'photos/home.html' , context)
-
-def search(req):
     search_photo=req.GET.get('search') #go get the user input 
+    if search_photo:
+        photos=Image.objects.filter(Q( category__name__icontains=search_photo)| Q(location__name__icontains=search_photo))
+        context={
+            'title':home,
+            'photos':photos
+        }
+        return render(req, 'photos/home.html' , context)
 
-    photos=Image.objects.filter(Q( category__name__icontains=search_photo)| Q(location__name__icontains=search_photo))
-    return render(req, 'photos/search.html', {'photos':photos})
+
+    else:
+    
+        photos=Image.objects.all()
+        context={
+            'title':home,
+            'photos':photos
+        }
+        return render(req, 'photos/home.html' , context)
+
+
 
 
 def category_page(req, pk):
