@@ -1,5 +1,5 @@
-from multiprocessing import context
 from django.shortcuts import render
+from django.db.models import Q
 
 import photos
 from . models import *
@@ -9,6 +9,9 @@ from . models import *
 
 def home(req):
     '''''this view is triggered when ckient got to the home page'''
+
+
+    
     photos=Image.objects.all()
     context={
         'title':home,
@@ -16,6 +19,11 @@ def home(req):
     }
     return render(req, 'photos/home.html' , context)
 
+def search(req):
+    search_photo=req.GET.get('search') #go get the user input 
+
+    photos=Image.objects.filter(Q( category__name__icontains=search_photo)| Q(location__name__icontains=search_photo))
+    return render(req, 'photos/search.html', {'photos':photos})
 
 
 def category_page(req, pk):

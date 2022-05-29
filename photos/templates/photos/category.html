@@ -2,12 +2,12 @@
 {%block content%}
 <div class="container">
     <div class="row mt-5" style=" height: 600px ;">
-        <div class="col-6 " >
+        <div class="col-6 "style="height: 90%;" >
 
-            <img src="{{photos.image.url}}" alt="" style="height: 60%; width:100%; object-fit: cover; border-radius:15px " >
+            <img src="{{photos.image.url}}" alt="" style="height: 100%; width:100%; object-fit: cover; border-radius:15px " >
 
         </div>
-        <div class="col-6">
+        <div class="col-6" style="box-shadow: 10px 20px 40px -14px rgba(0, 0, 0, 0.25);height: 90%;">
             <i class="bi bi-three-dots" style="font-size: 1.5rem; margin-right: 15px; font-weight: 900;"></i>
             <i class="bi bi-download" style="font-size: 1.5rem; margin-right: 15px; font-weight: 900;"></i>
             <i class="bi bi-clipboard" style="font-size: 1.5rem;"></i>
@@ -37,17 +37,16 @@
 <div class="main">
  {%for all in allphotos%}
 
-  <ul class="cards">
-    <li class="cards_item">
-      <div class="card">
+  <ul class="cards" >
+    <li class="cards_item"  >
+      <div class="card"  style="border: none !important;">
        
         <div class="card_image"> <a href="{%url 'category' pk=all.id%}"><img src="{{all.image.url}}"></a></div>
-        <div class="card_content">
-          <h2 class="card_title">{{all.name}}</h2>
+          <h2 class="card_title" >{{all.name}}</h2>
           <p class="card_text">{{all.decription}}</p>
           <i class="bi bi-geo-alt"><small>{{photos.location}}</small></i>
+         
 
-        </div>
       </div>
     </li>
   </ul>

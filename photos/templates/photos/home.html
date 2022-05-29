@@ -12,49 +12,60 @@
 
 
                 <a href="{%url 'category' pk=photo.id%}"><img src="{{photo.image.url}}" alt="" style="height: 50%; width: 100%;"> </a>
+                <p>{{photo.name}}</p>
                 {%endif%}
-                {%if forloop.counter == 2%}
 
-                <a href="{%url 'category' pk=photo.id%}"><img src="{{photo.image.url}}" alt="" style="height: 40%; width: 100%;">   </a>
-                {%endif%}
-                {%if forloop.counter == 3%}
+                {%if forloop.counter == 2%}
 
                 <a href="{%url 'category' photo.id%}"><img src="{{photo.image.url}}" alt="" style="height: 25%; width: 100%;">
                 </a>
+                <p>{{photo.name}}</p>
+                {%endif%} 
+                
+                {%if forloop.counter == 3%}
+
+                <a href="{%url 'category' photo.id%}"><img src="{{photo.image.url}}" alt="" style="height: 105%; width: 100%;">
+                </a>
+                <p>{{photo.name}}</p>
                 {%endif%} 
                 {%if forloop.counter == 4%}
 
                 <a href="{%url 'category' photo.id%}"><img src="{{photo.image.url}}" alt="" style="height: 55%; width: 100%;">
                 </a>
+                <p>{{photo.name}}</p>
                 {%endif%} 
                 {%if forloop.counter == 5%}
 
                 <a href="{%url 'category' photo.id%}"><img src="{{photo.image.url}}" alt="" style="height: 55%; width: 100%;">
                 </a>
+                <p>{{photo.name}}</p>
                 {%endif%} 
                 {%if forloop.counter == 6%}
 
-                <a href="{%url 'category' photo.id%}"><img src="{{photo.image.url}}" alt="" style="height: 45%; width: 100%;">
+                <a href="{%url 'category' photo.id%}"><img src="{{photo.image.url}}" alt="" style="height: 45%; width: 100%; margin-top: 40px;">
+                  <p>{{photo.name}}</p>
                 </a>
                 {%endif%} 
                 {%if forloop.counter == 7%}
 
                 <a href="{%url 'category' photo.id%}"><img src="{{photo.image.url}}" alt="" style="height: 45%; width: 100%; margin-top: 30px;">
                 </a>
+                <p>{{photo.name}}</p>
                 {%endif%} 
+                {%if forloop.counter == 10%}
 
+                <a href="{%url 'category' pk=photo.id%}"><img src="{{photo.image.url}}" alt="" style="height: 40%; width: 100%;">   </a>
+                <p>{{photo.name}}</p>
+                {%endif%}
                 {%if forloop.counter == 8%}
 
-                <a href="{%url 'category' photo.id%}"><img src="{{photo.image.url}}" alt="" style=" width: 80%; margin-top: 30px;  position: absolute; bottom: 5%;">
-                </a>
-                {%endif%} 
-                {%if forloop.counter == 9%}
-
-                <a href="{%url 'category' photo.id%}"><img src="{{photo.image.url}}" alt="" style=" width: 80%; margin-bottom: 150px; position: absolute; right: -290%; bottom: -100%;">
-                </a>
-                {%endif%} 
-                
+                <a href="{%url 'category' pk=photo.id%}"><img src="{{photo.image.url}}" alt="" style="height: 40%; width: 100%;">   </a>
+                <p>{{photo.name}}</p>
+                {%endif%}
+         
               <!-- <p>image1</p> -->
+              <!-- margin-bottom: 150px; position: absolute; right: -290%; bottom: -100%; -->
+              <!-- position: absolute; bottom: 5%; -->
             </div>
            
 
