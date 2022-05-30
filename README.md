@@ -22,19 +22,15 @@ web
 
 ### Installation
 1. Clone this Github repository:
-''' 
+'''
     git clone https://github.com/kmollee/gallery.git
 
      cd Django_photo_gallery
-
-
 '''
 2. Install the pre-requisites:
 
 ''' 
-      
       pip install -r requirements.txt
-
 '''
 
 
@@ -42,24 +38,18 @@ web
 
 ''' 
     cp gallery/settings_local.template gallery/settings_local.py
-
-
 '''
 
 
 4. Edit the local settings file with your settings:
 ''' 
      vi gallery/settings_local.py
-
-
 '''
 
 
 5. Create the database and admin user:
 ''' 
     python manage.py syncdb
-
-
 '''
 
 
@@ -67,11 +57,10 @@ web
 6. Collect static files:
 ''' 
    python manage.py collectstatic
-
 '''
 
 
-Configure your web server to serve static files from the directory specified in the local settings file. See the following Django documentation 
+7.Configure your web server to serve static files from the directory specified in the local settings file. See the following Django documentation 
 
 
 
