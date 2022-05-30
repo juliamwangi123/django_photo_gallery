@@ -21,7 +21,7 @@ web
     - static- where the pictures you upload and their miniatures are stored.
 
 ### Installation
-Clone this Github repository:
+1. Clone this Github repository:
 ''' 
     git clone https://github.com/kmollee/gallery.git
 
@@ -29,40 +29,47 @@ Clone this Github repository:
 
 
 '''
-Install the pre-requisites:
-'''
-   pip install -r requirements.txt
+2. Install the pre-requisites:
+
+''' 
+      
+      pip install -r requirements.txt
 
 '''
 
 
-'''
-    Copy the settings template to create your local settings:
+3. Copy the settings template to create your local settings:
 
-'''
-
-Edit the local settings file with your settings:
-
-'''
- vi gallery/settings_local.py
-
-'''
-
-Create the database and admin user:
-
-'''
- python manage.py syncdb
+''' 
+    cp gallery/settings_local.template gallery/settings_local.py
 
 
 '''
 
-Collect static files:
+
+4. Edit the local settings file with your settings:
+''' 
+     vi gallery/settings_local.py
+
 
 '''
- python manage.py collectstatic
+
+
+5. Create the database and admin user:
+''' 
+    python manage.py syncdb
 
 
 '''
+
+
+
+6. Collect static files:
+''' 
+   python manage.py collectstatic
+
+'''
+
 
 Configure your web server to serve static files from the directory specified in the local settings file. See the following Django documentation 
 
