@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+
+nav menu ul li .home{
+    color: white;
+}
+
+.content img{
+    height: 200px;
+    width:200px
+}
+
+.home-card .row div img{
+    border-radius: 16px;
+    /* border: 2px solid red; */
+    object-fit: cover;
+}
+
+.main{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  h1 {
+      font-size: 24px;
+      font-weight: 900;
+      text-align: center;
+      margin-top: 80px;
+  }
+  
+  img {
+    height: 100%;
+    width: 100%;
+    /* vertical-align: middle; */
+  }
+  
+  .btn {
+    color: black;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
+    background: transparent;
+  }
+  
+  
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    height: 350px;
+    border: none;
+    outline: navy;
+  }
+  
+  .cards_item {
+    display: flex;
+    padding: 1rem;
+  }
+  
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  
+  
+  .card_title {
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+  }
+  
+  .card_text {
+    color: black;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    /* margin-bottom: 1.25rem;     */
+    font-weight: 400;
+  }
+  
