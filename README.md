@@ -12,7 +12,7 @@ It is a Django app to show and manage images grouped in galleries(inspired by pi
 
 
 #### screenshot
-[pin.png](https://postimg.cc/87v6kVCF)
+<!-- [pin.png](https://postimg.cc/87v6kVCF) -->
 [![pin.png](https://i.postimg.cc/RZsQRS5T/pin.png)](https://postimg.cc/87v6kVCF)
 
 
