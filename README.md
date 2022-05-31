@@ -1,7 +1,7 @@
 # django_photo_gallery
 ## Description
 It is a Django app to show and manage images grouped in galleries(inspired by pintrest).
-It is a web application that let you do the previous. Perfect option for people who just need a simple portfolio page and only want to focus on their work (artists, photographers, designers, painters).
+ Perfect option for people who just need a simple portfolio page and only want to focus on their work (artists, photographers, designers, painters).
 
 
 #### Features
@@ -12,12 +12,12 @@ It is a web application that let you do the previous. Perfect option for people 
 
 
 ### Directory tree
-web
-   - django-photo_gallery
-   - gallery- base application folder.
-    * settings.py - the configuration file.
-    - photos.
-    - static- where the pictures you upload and their miniatures are stored.
+
+- django-photo_gallery
+- gallery- base application folder.
+* settings.py - the configuration file.
+- photos.
+- static- where the pictures you upload and their miniatures are stored.
 
 ### Installation
 1. Clone this Github repository:
@@ -62,16 +62,15 @@ web
 ```
 
 
-7.Configure your web server to serve static files from the directory specified in the local settings file. See the following Django documentation 
+7. Configure your web server to serve static files from the directory specified in the local settings file. See the following Django documentation 
 
 
 
-Launch the application using the built-in runserver, or deploy using gunicorn, which is the application server of choice:
+8. Launch the application using the built-in runserver, or deploy using gunicorn, which is the application server of choice:
 
-'''
+```
 web: gunicorn gallery.wsgi --log-file -
-
-'''
+```
 
 #### Known Bugs
 If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue here by including your search query and the expected result.
