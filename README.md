@@ -11,12 +11,15 @@ It is a Django app to show and manage images grouped in galleries(inspired by pi
 4. [Javascript](https://www.javascript.com/) -programming language
 
 
+#### screenshot
+<img src=''>
+
+
 ### Directory tree
 
 - django-photo_gallery
 - gallery- base application folder.
 * settings.py - the configuration file.
-- photos.
 - static- where the pictures you upload and their miniatures are stored.
 
 ### Installation
