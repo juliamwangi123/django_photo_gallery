@@ -5,10 +5,10 @@ It is a web application that let you do the previous. Perfect option for people 
 
 
 #### Features
-1. [Python] (https://www.python.org/): programming language.
-2. [Django]  (https://www.djangoproject.com/): web framework.
-3. [Bootstrap] (https://getbootstrap.com/): front-end framework.
-4. [Javascript] (https://www.javascript.com/) -programming language
+1. [Python](https://www.python.org/): programming language.
+2. [Django](https://www.djangoproject.com/): web framework.
+3. [Bootstrap](https://getbootstrap.com/): front-end framework.
+4. [Javascript](https://www.javascript.com/) -programming language
 
 
 ### Directory tree
