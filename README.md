@@ -5,10 +5,10 @@ It is a web application that let you do the previous. Perfect option for people 
 
 
 #### Features
-1. Python: programming language.
-2. Django: web framework.
-3. Bootstrap: front-end framework.
-4. Javascript -programming language
+1. [Python] (https://www.python.org/): programming language.
+2. [Django]  (https://www.djangoproject.com/): web framework.
+3. [Bootstrap] (https://getbootstrap.com/): front-end framework.
+4. [Javascript] (https://www.javascript.com/) -programming language
 
 
 ### Directory tree
@@ -22,42 +22,42 @@ web
 
 ### Installation
 1. Clone this Github repository:
-'''
+```
     git clone https://github.com/kmollee/gallery.git
 
      cd Django_photo_gallery
-'''
+```bash
 2. Install the pre-requisites:
 
-''' 
+```
       pip install -r requirements.txt
-'''
+```
 
 
 3. Copy the settings template to create your local settings:
 
-''' 
+```
     cp gallery/settings_local.template gallery/settings_local.py
-'''
+```
 
 
 4. Edit the local settings file with your settings:
-''' 
+```
      vi gallery/settings_local.py
-'''
+```
 
 
 5. Create the database and admin user:
-''' 
+```
     python manage.py syncdb
-'''
+```
 
 
 
 6. Collect static files:
-''' 
+```
    python manage.py collectstatic
-'''
+```
 
 
 7.Configure your web server to serve static files from the directory specified in the local settings file. See the following Django documentation 
