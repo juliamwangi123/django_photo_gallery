@@ -14,9 +14,8 @@ It is a web application that let you do the previous. Perfect option for people 
 ### Directory tree
 web
    - django-photo_gallery
-    - deploy - contains sample files used when deploying on apache server.
    - gallery- base application folder.
-        * settings.py - the configuration file.
+    * settings.py - the configuration file.
     - photos.
     - static- where the pictures you upload and their miniatures are stored.
 
@@ -24,9 +23,11 @@ web
 1. Clone this Github repository:
 ```
     git clone https://github.com/kmollee/gallery.git
+     
+    cd Django_photo_gallery
 
-     cd Django_photo_gallery
-```bash
+```
+
 2. Install the pre-requisites:
 
 ```
@@ -55,6 +56,7 @@ web
 
 
 6. Collect static files:
+
 ```
    python manage.py collectstatic
 ```
